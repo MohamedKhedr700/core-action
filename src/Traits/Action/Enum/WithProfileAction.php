@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Raid\Core\Traits\Action\Enum;
 
 trait WithProfileAction
