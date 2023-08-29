@@ -12,7 +12,8 @@
         "action"
     ],
     "require": {
-        "php": "^8.2"
+        "php": "^8.2",
+        "raid/core-enum": "*"
     },
     "require-dev": {
         "lanin/laravel-api-debugger": "^4.0",
