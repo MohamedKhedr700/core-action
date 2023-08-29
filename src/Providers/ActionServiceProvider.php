@@ -5,7 +5,7 @@ namespace Raid\Core\Providers;
 use Illuminate\Support\ServiceProvider;
 use Raid\Core\Traits\Provider\WithEventServiceProviderResolver;
 
-class EventServiceProvider extends ServiceProvider
+class ActionServiceProvider extends ServiceProvider
 {
     use WithEventServiceProviderResolver;
 
@@ -19,6 +19,7 @@ class EventServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        $this->registerConfig();
     }
 
     /**
