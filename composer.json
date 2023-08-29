@@ -1,0 +1,44 @@
+{
+    "name": "raid/core-action",
+    "description": "Raid Core Action",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "keywords": [
+        "laravel",
+        "raid",
+        "core",
+        "action"
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "lanin/laravel-api-debugger": "^4.0",
+        "laravel/pint": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Raid\\Core\\": "src"
+        }
+    },
+    "scripts": {
+        "pint": [
+            "./vendor/bin/pint --config pint.json "
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Raid\\Core\\Providers\\ActionServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "mohamed_khedr",
+            "email": "mohamedkhedr700@gmail.com"
+        }
+    ]
+}
