@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Actions\Contracts;
+namespace Raid\Core\Action\Actions\Contracts;
 
 interface ActionAuthorizationInterface
 {

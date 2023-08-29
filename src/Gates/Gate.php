@@ -1,11 +1,11 @@
 <?php
 
-namespace Raid\Core\Gates;
+namespace Raid\Core\Action\Gates;
 
 use Illuminate\Support\Facades\Gate as GateFacade;
 use Illuminate\Support\Str;
 use Modules\Account\Contracts\AccountInterface;
-use Raid\Core\Gates\Contracts\GateInterface;
+use Raid\Core\Action\Gates\Contracts\GateInterface;
 
 abstract class Gate implements GateInterface
 {

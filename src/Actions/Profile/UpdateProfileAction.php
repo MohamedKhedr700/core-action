@@ -1,10 +1,10 @@
 <?php
 
-namespace Raid\Core\Actions\Profile;
+namespace Raid\Core\Action\Actions\Profile;
 
-use Raid\Core\Actions\Action;
-use Raid\Core\Actions\Contracts\Profile\UpdateProfileActionInterface;
-use Raid\Core\Models\Action\Enum\Action as ActionEnum;
+use Raid\Core\Action\Actions\Action;
+use Raid\Core\Action\Actions\Contracts\Profile\UpdateProfileActionInterface;
+use Raid\Core\Action\Models\Action\Enum\Action as ActionEnum;
 
 abstract class UpdateProfileAction extends Action implements UpdateProfileActionInterface
 {

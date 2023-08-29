@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Gates\Contracts;
+namespace Raid\Core\Action\Gates\Contracts;
 
 interface GateInterface
 {

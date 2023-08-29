@@ -1,10 +1,10 @@
 <?php
 
-namespace Raid\Core\Actions\Contracts\Crud;
+namespace Raid\Core\Action\Actions\Contracts\Crud;
 
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
-use Raid\Core\Actions\Contracts\ActionInterface;
+use Raid\Core\Action\Actions\Contracts\ActionInterface;
 
 interface ListActionInterface extends ActionInterface
 {

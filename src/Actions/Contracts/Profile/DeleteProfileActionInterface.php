@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Actions\Contracts\Profile;
+namespace Raid\Core\Action\Actions\Contracts\Profile;
 
 interface DeleteProfileActionInterface
 {

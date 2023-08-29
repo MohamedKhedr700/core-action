@@ -1,13 +1,13 @@
 <?php
 
-namespace Raid\Core\Actions\Crud;
+namespace Raid\Core\Action\Actions\Crud;
 
 use Exception;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
-use Raid\Core\Actions\Action;
-use Raid\Core\Actions\Contracts\Crud\ListActionInterface;
-use Raid\Core\Models\Action\Enum\Action as ActionEnum;
+use Raid\Core\Action\Actions\Action;
+use Raid\Core\Action\Actions\Contracts\Crud\ListActionInterface;
+use Raid\Core\Action\Models\Action\Enum\Action as ActionEnum;
 
 abstract class ListAction extends Action implements ListActionInterface
 {

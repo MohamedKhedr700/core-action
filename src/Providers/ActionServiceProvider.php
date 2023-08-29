@@ -1,9 +1,9 @@
 <?php
 
-namespace Raid\Core\Providers;
+namespace Raid\Core\Action\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Raid\Core\Traits\Provider\WithActionServiceProviderResolver;
+use Raid\Core\Action\Traits\Provider\WithActionServiceProviderResolver;
 
 class ActionServiceProvider extends ServiceProvider
 {

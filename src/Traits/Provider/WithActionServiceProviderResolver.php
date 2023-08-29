@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Traits\Provider;
+namespace Raid\Core\Action\Traits\Provider;
 
 trait WithActionServiceProviderResolver
 {

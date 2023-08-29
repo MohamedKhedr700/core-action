@@ -1,8 +1,8 @@
 <?php
 
-namespace Raid\Core\Actions\Contracts;
+namespace Raid\Core\Action\Actions\Contracts;
 
-use Raid\Core\Events\Contracts\EventActionInterface;
+use Raid\Core\Action\Events\Contracts\EventActionInterface;
 
 interface ActionEventInterface
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Raid\Core\Actions;
+namespace Raid\Core\Action\Actions;
 
-use Raid\Core\Actions\Contracts\ActionAuthorizationInterface;
-use Raid\Core\Actions\Contracts\ActionEventInterface;
-use Raid\Core\Actions\Contracts\ActionInterface;
-use Raid\Core\Traits\Action\WithActionAuthorization;
-use Raid\Core\Traits\Action\WithActionEvent;
-use Raid\Core\Traits\Action\WithActionHelper;
-use Raid\Core\Traits\Action\WithActionRepository;
-use Raid\Core\Traits\Action\WithActionResolver;
+use Raid\Core\Action\Actions\Contracts\ActionAuthorizationInterface;
+use Raid\Core\Action\Actions\Contracts\ActionEventInterface;
+use Raid\Core\Action\Actions\Contracts\ActionInterface;
+use Raid\Core\Action\Traits\Action\WithActionAuthorization;
+use Raid\Core\Action\Traits\Action\WithActionEvent;
+use Raid\Core\Action\Traits\Action\WithActionHelper;
+use Raid\Core\Action\Traits\Action\WithActionRepository;
+use Raid\Core\Action\Traits\Action\WithActionResolver;
 
 abstract class Action implements ActionInterface, ActionAuthorizationInterface, ActionEventInterface
 {

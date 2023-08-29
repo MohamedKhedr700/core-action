@@ -1,8 +1,8 @@
 <?php
 
-namespace Raid\Core\Actions\Contracts\Profile;
+namespace Raid\Core\Action\Actions\Contracts\Profile;
 
-use Raid\Core\Contracts\Account\AccountInterface;
+use Raid\Core\Action\Contracts\Account\AccountInterface;
 
 interface UpdateProfileActionInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Raid\Core\Actions\Contracts;
+namespace Raid\Core\Action\Actions\Contracts;
 
-use Raid\Core\Repositories\Contracts\RepositoryInterface;
+use Raid\Core\Action\Repositories\Contracts\RepositoryInterface;
 
 interface ActionInterface
 {

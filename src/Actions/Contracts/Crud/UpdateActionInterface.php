@@ -1,9 +1,9 @@
 <?php
 
-namespace Raid\Core\Actions\Contracts\Crud;
+namespace Raid\Core\Action\Actions\Contracts\Crud;
 
-use Raid\Core\Actions\Contracts\ActionInterface;
-use Raid\Core\Models\Contracts\ModelInterface;
+use Raid\Core\Action\Actions\Contracts\ActionInterface;
+use Raid\Core\Action\Models\Contracts\ModelInterface;
 
 interface UpdateActionInterface extends ActionInterface
 {
