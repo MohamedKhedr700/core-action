@@ -3,11 +3,11 @@
 namespace Raid\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Raid\Core\Traits\Provider\WithEventServiceProviderResolver;
+use Raid\Core\Traits\Provider\WithActionServiceProviderResolver;
 
 class ActionServiceProvider extends ServiceProvider
 {
-    use WithEventServiceProviderResolver;
+    use WithActionServiceProviderResolver;
 
     /**
      * The commands to be registered.

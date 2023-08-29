@@ -2,7 +2,7 @@
 
 namespace Raid\Core\Traits\Provider;
 
-trait WithEventServiceProviderResolver
+trait WithActionServiceProviderResolver
 {
     /**
      * Register config.
