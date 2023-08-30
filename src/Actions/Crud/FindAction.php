@@ -4,7 +4,7 @@ namespace Raid\Core\Action\Actions\Crud;
 
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\Crud\FindActionInterface;
-use Raid\Core\Enum\Action\Models\Action\Action as ActionEnum;
+use Raid\Core\Enum\Models\Action\Action as ActionEnum;
 
 abstract class FindAction extends Action implements FindActionInterface
 {
