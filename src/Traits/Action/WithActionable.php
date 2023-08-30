@@ -55,14 +55,6 @@ trait WithActionable
 
     /**
      * {@inheritdoc}
-     */
-    public function setActionable(object $actionable): void
-    {
-        $this->actionable = $actionable;
-    }
-
-    /**
-     * {@inheritdoc}
      *
      * @throws Exception
      */
@@ -85,7 +77,7 @@ trait WithActionable
         $actionableClass = static::actionableClass();
 
         if (! empty($actionableClass)) {
-            $this->setActionable(app($actionableClass));
+            $this->actionable = app($actionableClass);
 
             return;
         }

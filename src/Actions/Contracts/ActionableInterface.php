@@ -25,11 +25,6 @@ interface ActionableInterface
     public static function getAction(): string;
 
     /**
-     * Set actionable instance.
-     */
-    public function setActionable(object $actionable): void;
-
-    /**
      * Get actionable instance.
      */
     public function actionable(): object;
