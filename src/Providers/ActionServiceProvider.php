@@ -29,5 +29,6 @@ class ActionServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->registerAction();
+        $this->registerGates();
     }
 }

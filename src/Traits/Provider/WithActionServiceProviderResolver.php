@@ -43,6 +43,20 @@ trait WithActionServiceProviderResolver
     }
 
     /**
+     * Register gates.
+     */
+    private function registerGates(): void
+    {
+        $gates = config('gate.gates', []);
+
+        foreach ($gates as $gateable => $gates) {
+            foreach ($gates as $gate) {
+                (new $gate($gateable))->register();
+            }
+        }
+    }
+
+    /**
      * Register actions facade handler.
      */
     private function registerActionsFacadeHandler(): void

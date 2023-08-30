@@ -4,38 +4,37 @@ namespace Raid\Core\Action\Gates;
 
 use Illuminate\Support\Facades\Gate as GateFacade;
 use Illuminate\Support\Str;
-use Modules\Account\Contracts\AccountInterface;
 use Raid\Core\Action\Gates\Contracts\GateInterface;
 
 abstract class Gate implements GateInterface
 {
     /**
-     * Gate repository.
+     * Gateable class.
      */
-    private string $repository;
+    private string $gateable;
 
     /**
      * Create a new gate instance.
      */
-    public function __construct(string $repository)
+    public function __construct(string $gateable)
     {
-        $this->repository = $repository;
+        $this->gateable = $gateable;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function repository(): string
+    public function gateable(): string
     {
-        return $this->repository;
+        return $this->gateable;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getRepositoryActions()
+    public function getActions()
     {
-        return $this->repository()::actions();
+        return $this->gateable()::getActions();
     }
 
     /**
@@ -43,17 +42,17 @@ abstract class Gate implements GateInterface
      */
     public function register(): void
     {
-        $repositoryActions = $this->getRepositoryActions();
+        $repositoryActions = $this->getActions();
 
         foreach ($repositoryActions as $action) {
-            $this->defineActionGate($action::getRepositoryAction(), $action::action());
+            $this->defineActionGate($action::getAction(), $action::action());
         }
     }
 
     /**
      * {@inheritdoc}
      */
-    public function defineActionGate(string $repositoryAction, string $action): void
+    public function defineActionGate(string $actionableAction, string $action): void
     {
         $method = Str::camel($action);
 
@@ -61,7 +60,7 @@ abstract class Gate implements GateInterface
             return;
         }
 
-        GateFacade::define($repositoryAction, function (AccountInterface $account, ...$arguments) use ($method) {
+        GateFacade::define($actionableAction, function ($account, ...$arguments) use ($method) {
             return $this->{$method}($account, ...$arguments);
         });
     }
