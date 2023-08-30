@@ -2,7 +2,6 @@
 
 namespace Raid\Core\Action\Traits\Action;
 
-
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 
 trait Actionable

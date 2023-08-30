@@ -2,8 +2,6 @@
 
 namespace Raid\Core\Action\Actions\Contracts;
 
-use Raid\Core\Action\Events\Contracts\EventActionInterface;
-
 interface ActionEventInterface
 {
     /**
@@ -49,5 +47,5 @@ interface ActionEventInterface
     /**
      * Get event action instance.
      */
-    public function event(): EventActionInterface;
+    public function event();
 }

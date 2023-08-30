@@ -49,8 +49,8 @@ trait WithActionServiceProviderResolver
     {
         $actionManager = config('event.actions_handler');
 
-//        $this->app->singleton(Actions::facade(), $actionManager);
-//        $this->app->singleton(ActionManagerInterface::class, $actionManager);
+        //        $this->app->singleton(Actions::facade(), $actionManager);
+        //        $this->app->singleton(ActionManagerInterface::class, $actionManager);
     }
 
     /**
