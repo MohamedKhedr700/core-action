@@ -7,7 +7,7 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\Crud\ListActionInterface;
-use Raid\Core\Action\Models\Action\Enum\Action as ActionEnum;
+use Raid\Core\Enum\Action\Models\Action\Action as ActionEnum;
 
 abstract class ListAction extends Action implements ListActionInterface
 {
@@ -33,7 +33,7 @@ abstract class ListAction extends Action implements ListActionInterface
      */
     public function all(array $filters = [], array $columns = ['*']): Collection
     {
-        return $this->repository()->retrieve($columns, ['filters' => $filters]);
+        return $this->actionable()->retrieve($columns, ['filters' => $filters]);
     }
 
     /**
@@ -43,6 +43,6 @@ abstract class ListAction extends Action implements ListActionInterface
      */
     public function paginate(array $filters = [], array $columns = ['*']): LengthAwarePaginator
     {
-        return $this->repository()->retrievePaginate($columns, ['filters' => $filters]);
+        return $this->actionable()->retrievePaginate($columns, ['filters' => $filters]);
     }
 }

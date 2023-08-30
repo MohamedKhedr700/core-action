@@ -6,7 +6,6 @@ use Exception;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\Crud\UpdateActionInterface;
 use Raid\Core\Action\Models\Action\Enum\Action as ActionEnum;
-use Raid\Core\Action\Models\Contracts\ModelInterface;
 
 abstract class UpdateAction extends Action implements UpdateActionInterface
 {
@@ -20,8 +19,8 @@ abstract class UpdateAction extends Action implements UpdateActionInterface
      *
      * @throws Exception
      */
-    public function handle(string|ModelInterface $id, array $data): ModelInterface
+    public function handle(string|object $id, array $data): object
     {
-        return $this->repository()->update($id, $data);
+        return $this->actionable()->update($id, $data);
     }
 }

@@ -19,6 +19,6 @@ abstract class PatchAction extends Action implements PatchActionInterface
      */
     public function handle(string|ModelInterface $id, array $data): ModelInterface
     {
-        return $this->repository()->update($id, $data);
+        return $this->actionable()->update($id, $data);
     }
 }

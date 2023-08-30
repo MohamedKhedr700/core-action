@@ -4,8 +4,7 @@ namespace Raid\Core\Action\Actions\Crud;
 
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\Crud\FindActionInterface;
-use Raid\Core\Action\Models\Action\Enum\Action as ActionEnum;
-use Raid\Core\Action\Models\Contracts\ModelInterface;
+use Raid\Core\Enum\Action\Models\Action\Action as ActionEnum;
 
 abstract class FindAction extends Action implements FindActionInterface
 {
@@ -17,8 +16,8 @@ abstract class FindAction extends Action implements FindActionInterface
     /**
      * {@inheritdoc}
      */
-    public function handle(string|ModelInterface $id, array $columns = ['*']): ?ModelInterface
+    public function handle(string|object $id, array $columns = ['*']): ?object
     {
-        return $this->repository()->findOrFail($id, $columns);
+        return $this->actionable()->findOrFail($id, $columns);
     }
 }

@@ -4,8 +4,7 @@ namespace Raid\Core\Action\Actions\Crud;
 
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\Crud\DeleteActionInterface;
-use Raid\Core\Action\Models\Action\Enum\Action as ActionEnum;
-use Raid\Core\Action\Models\Contracts\ModelInterface;
+use Raid\Core\Enum\Action\Models\Action\Action as ActionEnum;
 
 abstract class DeleteAction extends Action implements DeleteActionInterface
 {
@@ -17,8 +16,8 @@ abstract class DeleteAction extends Action implements DeleteActionInterface
     /**
      * {@inheritdoc}
      */
-    public function handle(string|ModelInterface $id): bool
+    public function handle(string|object $id): bool
     {
-        return $this->repository()->destroy($id);
+        return $this->actionable()->destroy($id);
     }
 }

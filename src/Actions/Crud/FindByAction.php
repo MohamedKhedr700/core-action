@@ -4,8 +4,7 @@ namespace Raid\Core\Action\Actions\Crud;
 
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\Crud\FindByActionInterface;
-use Raid\Core\Action\Models\Action\Enum\Action as ActionEnum;
-use Raid\Core\Action\Models\Contracts\ModelInterface;
+use Raid\Core\Enum\Action\Models\Action\Action as ActionEnum;
 
 abstract class FindByAction extends Action implements FindByActionInterface
 {
@@ -19,6 +18,6 @@ abstract class FindByAction extends Action implements FindByActionInterface
      */
     public function handle(array $conditions, array $columns = ['*'], bool $trashed = false): ?ModelInterface
     {
-        return $this->repository()->findBy($conditions, $columns, $trashed);
+        return $this->actionable()->findBy($conditions, $columns, $trashed);
     }
 }
