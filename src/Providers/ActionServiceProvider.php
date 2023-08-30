@@ -20,6 +20,7 @@ class ActionServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->registerConfig();
+        $this->registerHelpers();
     }
 
     /**
@@ -27,5 +28,6 @@ class ActionServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->registerAction();
     }
 }

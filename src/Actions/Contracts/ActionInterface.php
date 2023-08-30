@@ -2,8 +2,6 @@
 
 namespace Raid\Core\Action\Actions\Contracts;
 
-use Raid\Core\Action\Repositories\Contracts\RepositoryInterface;
-
 interface ActionInterface
 {
     /**
