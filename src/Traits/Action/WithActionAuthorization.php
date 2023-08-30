@@ -75,7 +75,7 @@ trait WithActionAuthorization
      */
     public function hasDefinedGate(): bool
     {
-        return Gate::has(static::getRepositoryAction());
+        return Gate::has(static::getAction());
     }
 
     /**
@@ -89,7 +89,7 @@ trait WithActionAuthorization
             return;
         }
 
-        Gate::authorize(static::getRepositoryAction(), ...$arguments);
+        Gate::authorize(static::getAction(), ...$arguments);
 
         $this->setAuthorized(true);
     }
