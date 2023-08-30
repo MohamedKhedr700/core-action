@@ -20,7 +20,7 @@ return [
     |
     */
 
-    'actionable_handler' => \Raid\Core\Action\Actions\Action::class,
+    'actionable_handler' => '',
 
     /*
     |--------------------------------------------------------------------------

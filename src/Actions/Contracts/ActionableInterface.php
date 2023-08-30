@@ -10,32 +10,32 @@ interface ActionableInterface
     public static function action(): string;
 
     /**
-     * Get the action repository class.
+     * Get the actionable class.
      */
-    public static function repositoryClass(): string;
+    public static function actionableClass(): string;
 
     /**
-     * Get the action repository module name.
+     * Get the actionable name.
      */
-    public static function repositoryModule(): string;
+    public static function actionableName(): string;
 
     /**
      * Get the action repository action name.
      */
-    public static function getRepositoryAction(): string;
+    public static function getAction(): string;
 
     /**
-     * Get repository instance.
+     * Set actionable instance.
      */
-    public function repository();
+    public function setActionable(object $actionable): void;
 
     /**
-     * Set repository instance.
+     * Get actionable instance.
      */
-    public function setRepository($repository): void;
+    public function actionable(): object;
 
     /**
-     * Load the repository.
+     * Load the actionable.
      */
-    public function loadRepository(): void;
+    public function loadActionable(): void;
 }

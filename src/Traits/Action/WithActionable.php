@@ -69,7 +69,7 @@ trait WithActionable
     public function actionable(): object
     {
         if (! isset($this->actionable)) {
-            $this->loadRepository();
+            $this->loadActionable();
         }
 
         return $this->actionable;
