@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38195004b59b9607af9cb04b8db2c48c",
+    "content-hash": "8c5abfc89f0890723d751ef5b3acb092",
     "packages": [
         {
             "name": "archtechx/enums",
@@ -59,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-enum.git",
-                "reference": "e0e1851530c302a38d937fe7d950c63a7b2a5727"
+                "reference": "8d77a1f171b79421cf6ab2e439d6931ee7aeb155"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-enum/zipball/e0e1851530c302a38d937fe7d950c63a7b2a5727",
-                "reference": "e0e1851530c302a38d937fe7d950c63a7b2a5727",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-enum/zipball/8d77a1f171b79421cf6ab2e439d6931ee7aeb155",
+                "reference": "8d77a1f171b79421cf6ab2e439d6931ee7aeb155",
                 "shasum": ""
             },
             "require": {
@@ -79,7 +79,7 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Raid\\Core\\Providers\\EnumServiceProvider"
+                        "Raid\\Core\\Enum\\Providers\\EnumServiceProvider"
                     ]
                 }
             },
@@ -109,7 +109,64 @@
                 "issues": "https://github.com/MohamedKhedr700/core-enum/issues",
                 "source": "https://github.com/MohamedKhedr700/core-enum/tree/main"
             },
-            "time": "2023-08-29T23:34:49+00:00"
+            "time": "2023-08-30T20:07:23+00:00"
+        },
+        {
+            "name": "raid/core-gate",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MohamedKhedr700/core-gate.git",
+                "reference": "e1948b8006977ddd2863d5a0f4723b4aa0f781a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-gate/zipball/e1948b8006977ddd2863d5a0f4723b4aa0f781a2",
+                "reference": "e1948b8006977ddd2863d5a0f4723b4aa0f781a2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.10"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Raid\\Core\\Gate\\Providers\\GateServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Raid\\Core\\Gate\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mohamed_khedr",
+                    "email": "mohamedkhedr700@gmail.com"
+                }
+            ],
+            "description": "Raid Core Gate Package",
+            "keywords": [
+                "core",
+                "gate",
+                "laravel",
+                "raid"
+            ],
+            "support": {
+                "issues": "https://github.com/MohamedKhedr700/core-gate/issues",
+                "source": "https://github.com/MohamedKhedr700/core-gate/tree/main"
+            },
+            "time": "2023-08-31T20:00:25+00:00"
         }
     ],
     "packages-dev": [
