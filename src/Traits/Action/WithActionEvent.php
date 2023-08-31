@@ -2,25 +2,19 @@
 
 namespace Raid\Core\Action\Traits\Action;
 
-use Raid\Core\Actions\Contracts\ActionInterface;
-use Raid\Core\Events\Contracts\EventActionInterface;
+use Raid\Core\Action\Actions\Contracts\ActionInterface;
 
 trait WithActionEvent
 {
     /**
      * Event action instance.
      */
-    protected EventActionInterface $event;
+    protected $event = null;
 
     /**
      * Indicates if the action should be run with registered events.
      */
     protected bool $withEvent = true;
-
-    /**
-     * Indicates if the action should be run events lazily.
-     */
-    protected bool $lazyEvent = true;
 
     /**
      * {@inheritdoc}
@@ -36,22 +30,6 @@ trait WithActionEvent
     public function getWithEvent(): bool
     {
         return $this->withEvent;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setLazyEvent(bool $lazyEvent): void
-    {
-        $this->lazyEvent = $lazyEvent;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getLazyEvent(): bool
-    {
-        return $this->lazyEvent;
     }
 
     /**
@@ -77,32 +55,20 @@ trait WithActionEvent
     /**
      * {@inheritdoc}
      */
-    public function withLazyEvent(): ActionInterface
+    public function event()
     {
-        $this->setLazyEvent(true);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function withoutLazyEvent(): ActionInterface
-    {
-        $this->setLazyEvent(false);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function event(): EventActionInterface
-    {
-        if (! isset($this->event)) {
-            $this->event = event_action($this->getRepositoryAction(), $this->getWithEvent(), $this->getLazyEvent());
+        if ($this->eventWorkerDefined() && ! isset($this->event)) {
+            $this->event = eventable($this->actionableClass(), $this->action())->setLazyLoad($this->lazyLoad());
         }
 
         return $this->event;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    private function eventWorkerDefined(): bool
+    {
+        return (bool) config('event.events_handler');
     }
 }

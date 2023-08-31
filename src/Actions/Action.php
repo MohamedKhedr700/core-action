@@ -10,15 +10,17 @@ use Raid\Core\Action\Traits\Action\WithActionAuthorization;
 use Raid\Core\Action\Traits\Action\WithActionEvent;
 use Raid\Core\Action\Traits\Action\WithActionHelper;
 use Raid\Core\Action\Traits\Action\WithActionResolver;
+use Raid\Core\Action\Traits\Action\WithLazyAction;
+use Raid\Core\Event\Events\Contracts\Concerns\LazyActionInterface;
 
-abstract class Action implements ActionAuthorizationInterface, ActionEventInterface, ActionInterface
+abstract class Action implements ActionAuthorizationInterface, ActionEventInterface, ActionInterface, LazyActionInterface
 {
     use WithActionable,
-        WithActionable,
-        //        WithActionEvent,
         WithActionAuthorization,
+        WithActionEvent,
         WithActionHelper,
-        WithActionResolver;
+        WithActionResolver,
+        WithLazyAction;
 
     /**
      * {@inheritdoc}
@@ -27,11 +29,11 @@ abstract class Action implements ActionAuthorizationInterface, ActionEventInterf
     {
         $this->authorized();
 
-        //        $this->event()->init(...$arguments);
+        $this->event()?->init(...$arguments);
 
         $result = $this->handle(...$arguments);
 
-        //        $this->event()->trigger($result);
+        $this->event()?->trigger($result);
 
         return $result;
     }
