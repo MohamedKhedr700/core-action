@@ -17,7 +17,6 @@
         "raid/core-gate": "*"
     },
     "require-dev": {
-        "lanin/laravel-api-debugger": "^4.0",
         "laravel/pint": "^1.10"
     },
     "autoload": {
