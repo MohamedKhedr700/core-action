@@ -57,7 +57,7 @@ trait WithActionEvent
      */
     public function event()
     {
-        if ($this->eventWorkerDefined() && ! isset($this->event)) {
+        if (! isset($this->event) && $this->hasDefinedEvent()) {
             $this->event = eventable($this->actionableClass(), $this->action())->setLazyLoad($this->lazyLoad());
         }
 
@@ -65,9 +65,9 @@ trait WithActionEvent
     }
 
     /**
-     * {@inheritdoc}
+     * Determine if the application has a defined event handler.
      */
-    private function eventWorkerDefined(): bool
+    private function hasDefinedEvent(): bool
     {
         return (bool) config('event.events_handler');
     }
