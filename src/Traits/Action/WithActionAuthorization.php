@@ -103,6 +103,6 @@ trait WithActionAuthorization
             return;
         }
 
-        //        Gate::authorize(static::getRepositoryAction());
+        //        Gate::authorize(static::getAction());
     }
 }

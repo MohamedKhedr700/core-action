@@ -72,6 +72,6 @@ trait WithActionServiceProviderResolver
      */
     private function registerActionableHandler(): void
     {
-//        $this->app->bind(ActionInterface::class, config('action.actionable_handler'));
+        //        $this->app->bind(ActionInterface::class, config('action.actionable_handler'));
     }
 }

@@ -42,9 +42,9 @@ abstract class Gate implements GateInterface
      */
     public function register(): void
     {
-        $repositoryActions = $this->getActions();
+        $actionableActions = $this->getActions();
 
-        foreach ($repositoryActions as $action) {
+        foreach ($actionableActions as $action) {
             $this->defineActionGate($action::getAction(), $action::action());
         }
     }

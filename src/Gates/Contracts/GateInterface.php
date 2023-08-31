@@ -5,14 +5,14 @@ namespace Raid\Core\Action\Gates\Contracts;
 interface GateInterface
 {
     /**
-     * Get gate repository.
+     * Get gateable class.
      */
-    public function repository(): string;
+    public function gateable(): string;
 
     /**
-     * Get repository actions.
+     * Get gateable actions.
      */
-    public function getRepositoryActions();
+    public function getActions();
 
     /**
      * Register gate.
@@ -22,5 +22,5 @@ interface GateInterface
     /**
      * Define an action gate.
      */
-    public function defineActionGate(string $repositoryAction, string $action): void;
+    public function defineActionGate(string $actionableAction, string $action): void;
 }

@@ -11,13 +11,13 @@ use Raid\Core\Action\Traits\Action\WithActionEvent;
 use Raid\Core\Action\Traits\Action\WithActionHelper;
 use Raid\Core\Action\Traits\Action\WithActionResolver;
 
-abstract class Action implements ActionInterface, ActionAuthorizationInterface, ActionEventInterface
+abstract class Action implements ActionAuthorizationInterface, ActionEventInterface, ActionInterface
 {
     use WithActionable,
-        WithActionAuthorization,
-        //        WithActionEvent,
-        WithActionHelper,
         WithActionable,
+        //        WithActionEvent,
+        WithActionAuthorization,
+        WithActionHelper,
         WithActionResolver;
 
     /**
