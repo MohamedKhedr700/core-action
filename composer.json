@@ -13,7 +13,8 @@
     ],
     "require": {
         "php": "^8.2",
-        "raid/core-enum": "*"
+        "raid/core-enum": "*",
+        "raid/core-gate": "*"
     },
     "require-dev": {
         "lanin/laravel-api-debugger": "^4.0",
