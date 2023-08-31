@@ -2,6 +2,8 @@
 
 namespace Raid\Core\Action\Actions\Contracts;
 
+use Raid\Core\Action\Actions\Contracts\Concerns\ActionableInterface;
+
 interface ActionInterface extends ActionableInterface
 {
     /**

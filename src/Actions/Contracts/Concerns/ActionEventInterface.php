@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Action\Actions\Contracts;
+namespace Raid\Core\Action\Actions\Contracts\Concerns;
 
 interface ActionEventInterface
 {
@@ -17,12 +17,12 @@ interface ActionEventInterface
     /**
      * Define action with required events.
      */
-    public function withEvent(): ActionInterface;
+    public function withEvent(): static;
 
     /**
      * Define action without required events.
      */
-    public function withoutEvent(): ActionInterface;
+    public function withoutEvent(): static;
 
     /**
      * Get event action instance.

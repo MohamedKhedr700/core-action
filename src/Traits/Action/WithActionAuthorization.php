@@ -4,7 +4,6 @@ namespace Raid\Core\Action\Traits\Action;
 
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\Gate;
-use Raid\Core\Action\Actions\Contracts\ActionInterface;
 
 trait WithActionAuthorization
 {
@@ -53,7 +52,7 @@ trait WithActionAuthorization
     /**
      * {@inheritdoc}
      */
-    public function withAuthorization(): ActionInterface
+    public function withAuthorization(): static
     {
         $this->setAuthorize(true);
 
@@ -63,7 +62,7 @@ trait WithActionAuthorization
     /**
      * {@inheritdoc}
      */
-    public function withoutAuthorization(): ActionInterface
+    public function withoutAuthorization(): static
     {
         $this->setAuthorize(false);
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Action\Actions\Contracts;
+namespace Raid\Core\Action\Actions\Contracts\Concerns;
 
 interface ActionAuthorizationInterface
 {
@@ -27,12 +27,12 @@ interface ActionAuthorizationInterface
     /**
      * Define action with required authorization.
      */
-    public function withAuthorization(): ActionInterface;
+    public function withAuthorization(): static;
 
     /**
      * Define action without required authorization.
      */
-    public function withoutAuthorization(): ActionInterface;
+    public function withoutAuthorization(): static;
 
     /**
      * Determine if the action has a defined gate.

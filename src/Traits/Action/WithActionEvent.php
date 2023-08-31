@@ -2,8 +2,6 @@
 
 namespace Raid\Core\Action\Traits\Action;
 
-use Raid\Core\Action\Actions\Contracts\ActionInterface;
-
 trait WithActionEvent
 {
     /**
@@ -35,7 +33,7 @@ trait WithActionEvent
     /**
      * {@inheritdoc}
      */
-    public function withEvent(): ActionInterface
+    public function withEvent(): static
     {
         $this->setWithEvent(true);
 
@@ -45,7 +43,7 @@ trait WithActionEvent
     /**
      * {@inheritdoc}
      */
-    public function withoutEvent(): ActionInterface
+    public function withoutEvent(): static
     {
         $this->setWithEvent(false);
 

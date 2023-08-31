@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Action\Actions\Contracts;
+namespace Raid\Core\Action\Actions\Contracts\Concerns;
 
 interface ActionableInterface
 {

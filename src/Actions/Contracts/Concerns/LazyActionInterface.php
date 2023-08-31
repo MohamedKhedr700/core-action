@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Event\Events\Contracts\Concerns;
+namespace Raid\Core\Action\Actions\Contracts\Concerns;
 
 interface LazyActionInterface
 {
