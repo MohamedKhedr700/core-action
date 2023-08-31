@@ -4,7 +4,7 @@ namespace Raid\Core\Action\Traits\Provider;
 
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 
-trait WithActionServiceProviderResolver
+trait WithActionProvider
 {
     /**
      * Register config.

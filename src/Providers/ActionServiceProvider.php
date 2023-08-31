@@ -3,11 +3,11 @@
 namespace Raid\Core\Action\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Raid\Core\Action\Traits\Provider\WithActionServiceProviderResolver;
+use Raid\Core\Action\Traits\Provider\WithActionProvider;
 
 class ActionServiceProvider extends ServiceProvider
 {
-    use WithActionServiceProviderResolver;
+    use WithActionProvider;
 
     /**
      * The commands to be registered.
@@ -29,6 +29,5 @@ class ActionServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->registerAction();
-        $this->registerGates();
     }
 }
