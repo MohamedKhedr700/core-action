@@ -61,9 +61,9 @@ trait WithActionEvent
     /**
      * {@inheritdoc}
      */
-    public function trigger(array $arguments = []): void
+    public function trigger($arguments = null): void
     {
-        $this->event()?->trigger($this->action(), ...$arguments);
+        $this->event()?->trigger($this->action(), $arguments);
     }
 
     /**

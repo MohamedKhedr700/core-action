@@ -32,7 +32,7 @@ interface ActionEventInterface
     /**
      * Trigger action event.
      */
-    public function trigger(array $arguments = []): void;
+    public function trigger($arguments = null): void;
 
     /**
      * Get event action instance.
