@@ -53,6 +53,22 @@ trait WithActionEvent
     /**
      * {@inheritdoc}
      */
+    public function init(array $arguments = []): void
+    {
+        $this->event()?->init($this->action(), ...$arguments);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function trigger(array $arguments = []): void
+    {
+        $this->event()?->trigger($this->action(), ...$arguments);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function event()
     {
         if (! isset($this->event) && $this->hasDefinedEvent()) {

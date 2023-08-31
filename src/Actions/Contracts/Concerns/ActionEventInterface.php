@@ -25,6 +25,16 @@ interface ActionEventInterface
     public function withoutEvent(): static;
 
     /**
+     * Initialize action event.
+     */
+    public function init(array $arguments = []): void;
+
+    /**
+     * Trigger action event.
+     */
+    public function trigger(array $arguments = []): void;
+
+    /**
      * Get event action instance.
      */
     public function event();

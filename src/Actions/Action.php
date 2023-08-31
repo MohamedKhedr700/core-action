@@ -29,11 +29,11 @@ abstract class Action implements ActionAuthorizationInterface, ActionEventInterf
     {
         $this->authorized();
 
-        $this->event()?->init(...$arguments);
+        $this->init($arguments);
 
         $result = $this->handle(...$arguments);
 
-        $this->event()?->trigger($result);
+        $this->trigger($result);
 
         return $result;
     }
