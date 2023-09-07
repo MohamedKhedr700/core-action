@@ -4,6 +4,7 @@ namespace Raid\Core\Action\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Raid\Core\Action\Traits\Provider\WithActionProvider;
+use Raid\Core\Action\Commands\PublishCommand;
 
 class ActionServiceProvider extends ServiceProvider
 {
@@ -12,7 +13,9 @@ class ActionServiceProvider extends ServiceProvider
     /**
      * The commands to be registered.
      */
-    protected array $commands = [];
+    protected array $commands = [
+        PublishCommand::class,
+    ];
 
     /**
      * Register any application services.
@@ -21,6 +24,7 @@ class ActionServiceProvider extends ServiceProvider
     {
         $this->registerConfig();
         $this->registerHelpers();
+        $this->registerCommands();
     }
 
     /**

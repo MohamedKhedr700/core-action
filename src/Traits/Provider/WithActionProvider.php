@@ -17,7 +17,7 @@ trait WithActionProvider
 
             $this->publishes([
                 $config => config_path(basename($config)),
-            ], 'config');
+            ], 'config-action');
         }
     }
 
@@ -31,6 +31,14 @@ trait WithActionProvider
         foreach ($helpers as $helper) {
             require_once $helper;
         }
+    }
+
+    /**
+     * Register commands.
+     */
+    private function registerCommands(): void
+    {
+        $this->commands($this->commands);
     }
 
     /**
