@@ -8,12 +8,12 @@ class PublishCommand extends Command
     /**
      * The console command name.
      */
-    protected $name = 'publish:raid-action';
+    protected string $name = 'publish:core-action';
 
     /**
      * The console command description.
      */
-    protected $description = 'Publish core action config files.';
+    protected string $description = 'Publish core action config files.';
 
     /**
      * Execute the console command.
