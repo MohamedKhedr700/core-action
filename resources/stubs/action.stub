@@ -1,0 +1,26 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Raid\Core\Action\Actions\Contracts\Crud\CreateActionInterface;
+use Raid\Core\Action\Actions\Crud\CreateAction;
+
+class $CLASS_NAME$ extends CreateAction implements CreateActionInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public const ACTION = '';
+
+    /**
+     * {@inheritDoc}
+     */
+    public const ACTIONABLE = '';
+
+    /**
+     * {@inheritDoc}
+     */
+    public function handle()
+    {
+    }
+}
