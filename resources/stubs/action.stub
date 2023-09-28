@@ -18,7 +18,7 @@ class $CLASS_NAME$ extends Action implements ActionInterface
     public const ACTIONABLE = '';
 
     /**
-     * {@inheritDoc}
+     * Handle the action.
      */
     public function handle()
     {
