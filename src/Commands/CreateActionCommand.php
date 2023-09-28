@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Event\Commands;
+namespace Raid\Core\Action\Commands;
 
 use Raid\Core\Command\Commands\CreateCommand;
 
