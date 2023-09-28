@@ -14,7 +14,7 @@ class PublishCommand extends CorePublishCommand
     /**
      * The console command description.
      */
-    protected string $description = 'Publish core action config files.';
+    protected $description = 'Publish core action config files.';
 
     /**
      * Execute the console command.
