@@ -2,10 +2,10 @@
 
 namespace $NAMESPACE$;
 
-use Raid\Core\Action\Actions\Contracts\Crud\CreateActionInterface;
-use Raid\Core\Action\Actions\Crud\CreateAction;
+use Raid\Core\Action\Actions\Contracts\ActionInterface;
+use Raid\Core\Action\Actions\Action;
 
-class $CLASS_NAME$ extends CreateAction implements CreateActionInterface
+class $CLASS_NAME$ extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}
