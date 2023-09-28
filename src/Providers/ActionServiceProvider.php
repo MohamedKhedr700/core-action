@@ -3,9 +3,9 @@
 namespace Raid\Core\Action\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Raid\Core\Action\Commands\CreateActionCommand;
 use Raid\Core\Action\Traits\Provider\WithActionProvider;
 use Raid\Core\Action\Commands\PublishCommand;
-use Raid\Core\Event\Commands\CreateActionCommand;
 
 class ActionServiceProvider extends ServiceProvider
 {
