@@ -15,7 +15,7 @@
         "php": "^8.2",
         "raid/core-enum": "*",
         "raid/core-gate": "*",
-        "raid/core-command": "dev-main"
+        "raid/core-command": "*"
     },
     "require-dev": {
         "laravel/pint": "^1.10"

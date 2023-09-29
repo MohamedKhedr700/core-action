@@ -4,7 +4,7 @@ namespace Raid\Core\Action\Commands;
 
 use Raid\Core\Command\Commands\PublishCommand as CorePublishCommand;
 
-class PublishCommand extends CorePublishCommand
+class PublishActionCommand extends CorePublishCommand
 {
     /**
      * The console command name.

@@ -5,7 +5,7 @@ namespace Raid\Core\Action\Providers;
 use Illuminate\Support\ServiceProvider;
 use Raid\Core\Action\Commands\CreateActionCommand;
 use Raid\Core\Action\Traits\Provider\WithActionProvider;
-use Raid\Core\Action\Commands\PublishCommand;
+use Raid\Core\Action\Commands\PublishActionCommand;
 
 class ActionServiceProvider extends ServiceProvider
 {
@@ -16,7 +16,7 @@ class ActionServiceProvider extends ServiceProvider
      */
     protected array $commands = [
         CreateActionCommand::class,
-        PublishCommand::class,
+        PublishActionCommand::class,
     ];
 
     /**
