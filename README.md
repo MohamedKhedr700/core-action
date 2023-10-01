@@ -74,7 +74,7 @@ The action class must extend `Action` class.
 
 The action class must define `ACTION` constant, which is the action name.
 
-The action class must define `ACTIONABLE` constant, which is the action related model.
+The action class must define `ACTIONABLE` constant, which is the action related actionable class.
 
 The action class must define `handle` method, which is the method that will be called when the action is executed.
 
@@ -149,7 +149,7 @@ class User extends Account
 
 This will allow us to execute the action from the model itself with other methods.
 
-use `getActions` method to get all actions related to the model.
+use `getActions` method to define all actions related to the model.
 
 ``` php
 <?php
@@ -174,6 +174,18 @@ class User extends Account
 }
 ```
 
+or you can define model actions in the `config/action.php` file.
+
+``` php
+'actions' => [
+    // here we define our actionable class.
+    User::class => [
+        // here we define our action classes.
+        CreateUserAction::class,
+    ],
+], 
+```
+
 Now we can execute the action from the model itself.
 
 ``` php
@@ -191,17 +203,6 @@ class UserController extends Controller
 
 The action will be executed and the user will be created.
 
-you can define model actions in the `config/action.php` file.
-
-``` php
-'actions' => [
-    // here we define our actionable class.
-    User::class => [
-        // here we define our action classes.
-        CreateUserAction::class,
-    ],
-], 
-```
 
 And that's it.
 
