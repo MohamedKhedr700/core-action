@@ -89,7 +89,7 @@ use App\Models\User;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 use Raid\Core\Action\Actions\Action;
 
-class CreateAction extends Action implements ActionInterface
+class CreateUserAction extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}
