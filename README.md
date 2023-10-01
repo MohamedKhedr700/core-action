@@ -47,7 +47,7 @@ namespace App\Actions;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 use Raid\Core\Action\Actions\Action;
 
-class CreateAction extends Action implements ActionInterface
+class CreateUserAction extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}
@@ -70,13 +70,15 @@ class CreateAction extends Action implements ActionInterface
 
 The action class must implement `ActionInterface` interface.
 
+The action class must extend `Action` class.
+
 The action class must define `ACTION` constant, which is the action name.
 
 The action class must define `ACTIONABLE` constant, which is the action class name.
 
 The action class must define `handle` method, which is the method that will be called when the action is executed.
 
-Now, let's complete our action class.
+Now, let's finish our action class.
 
 ``` php
 <?php
@@ -102,7 +104,7 @@ class CreateAction extends Action implements ActionInterface
     /**
      * Handle the action.
      */
-    public function handle(array $data)
+    public function handle(array $data): User
     {
         return $this->actionable()->create($data);
     }
@@ -147,7 +149,7 @@ class User extends Account
 
 This will allow us to execute the action from the model itself with other methods.
 
-use getActions method to get all actions related to the model.
+use `getActions` method to get all actions related to the model.
 
 ``` php
 <?php
