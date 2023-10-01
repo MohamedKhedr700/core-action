@@ -74,7 +74,7 @@ The action class must extend `Action` class.
 
 The action class must define `ACTION` constant, which is the action name.
 
-The action class must define `ACTIONABLE` constant, which is the action class name.
+The action class must define `ACTIONABLE` constant, which is the action related model.
 
 The action class must define `handle` method, which is the method that will be called when the action is executed.
 
