@@ -18,23 +18,56 @@ php artisan core:publish-action
 ## Usage
 
 ``` php
-$user = User::create($data);
-
-User::events('create', $user);
-
-// or using the trigger method
-User::events()->trigger('create', $user);
-
-// using the facade
-Events::trigger('user.create', $user);
-
-// using the helper
-events()->trigger('user.create', $user);
+class UserController extends Controller
+{
+    /**
+     * Invoke the controller method.
+     */
+    public function __invoke(Request $request, CreateUserAction $action)
+    {
+        $action->execute($request->only(['name', 'email', 'password']));
+    
+        // or using the static call
+        CreateUserAction::exec($request->only(['name', 'email', 'password']));
+    }
+}
 ```
 
 # How to work this
 
-Let's start with our eventable class `User`.
+Let's start with our action class `CreateUserAction`.
+
+you can use the command `php artisan core:make-action CreateUserAction` to create the action class.
+
+``` php
+<?php
+
+namespace App\Actions;
+
+use Raid\Core\Action\Actions\Contracts\ActionInterface;
+use Raid\Core\Action\Actions\Action;
+
+class CreateAction extends Action implements ActionInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public const ACTION = '';
+
+    /**
+     * {@inheritDoc}
+     */
+    public const ACTIONABLE = '';
+
+    /**
+     * Handle the action.
+     */
+    public function handle()
+    {
+    }
+}
+```
+
 
 ## License
 
@@ -42,7 +75,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## Credits
 
-- [Mohamed Khedr]
+- [MohamedKhedr700]()
 
 ## Security
 
@@ -51,8 +84,8 @@ instead of using the issue tracker.
 
 ## About Raid
 
-Raid is a PHP framework created by [Mohamed Khedr]
-and is maintained by [Mohamed Khedr].
+Raid is a PHP framework created by [MohamedKhedr700]()
+and is maintained by [MohamedKhedr700]().
 
 ## Support Raid
 
