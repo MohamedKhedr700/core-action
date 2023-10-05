@@ -37,7 +37,11 @@ class UserController extends Controller
 
 Let's start with our action class `CreateUserAction`.
 
-you can use the command `php artisan core:make-action CreateUserAction` to create the action class.
+you can use the command to create the action class.
+
+``` bash
+php artisan make-action CreateUserAction
+```
 
 ``` php
 <?php
@@ -78,7 +82,7 @@ The action class must define `ACTIONABLE` constant, which is the action related 
 
 The action class must define `handle` method, which is the method that will be called when the action is executed.
 
-Now, let's finish our action class.
+Let's finish our action class.
 
 ``` php
 <?php
@@ -130,7 +134,7 @@ class UserController extends Controller
 }
 ```
 
-The user is created and everything is fine, but we can structure our pattern more.
+The user is created, and everything is fine, but we can structure our pattern more.
 
 in the actionable class ex:`User` model, we can relate the actionable class with its actions.
 
@@ -149,7 +153,12 @@ class User extends Account
 
 This will allow us to execute the action from the model itself with other methods.
 
-use `getActions` method to define all actions related to the model.
+
+### Execute action from the model
+
+We can execute the action from the actionable calss or from `config/action.php` file.
+
+- Define `getActions` method in the actionable class.
 
 ``` php
 <?php
@@ -168,13 +177,14 @@ class User extends Account
     public static function getActions(): array
     {
         return [
+            // here we define our action classes.
             CreateUserAction::class,
         ];
     }
 }
 ```
 
-or you can define model actions in the `config/action.php` file.
+- or define actionable classes with actions in the `config/action.php` file.
 
 ``` php
 'actions' => [
@@ -201,8 +211,10 @@ class UserController extends Controller
 }
 ```
 
-The action will be executed and the user will be created.
+The action will be executed and the model will be created.
 
+
+<br>
 
 And that's it.
 
@@ -221,8 +233,7 @@ instead of using the issue tracker.
 
 ## About Raid
 
-Raid is a PHP framework created by **[Mohamed Khedr](https://github.com/MohamedKhedr700)**
-
+Raid is a PHP framework created by **[Mohamed Khedr](https://github.com/MohamedKhedr700)**,
 and it is maintained by **[Mohamed Khedr](https://github.com/MohamedKhedr700)**.
 
 ## Support Raid

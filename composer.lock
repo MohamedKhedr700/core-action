@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "841db60835a3329d94eaac74960565d9",
+    "content-hash": "0c848b8a94045c042b1fa6d78be8af18",
     "packages": [
         {
             "name": "archtechx/enums",
@@ -59,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-command.git",
-                "reference": "6fbd6389463c229851cd559024c116db26856cff"
+                "reference": "8a4ba6897f0e655f5ddec8b995fea8ec4c78ffd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-command/zipball/6fbd6389463c229851cd559024c116db26856cff",
-                "reference": "6fbd6389463c229851cd559024c116db26856cff",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-command/zipball/8a4ba6897f0e655f5ddec8b995fea8ec4c78ffd3",
+                "reference": "8a4ba6897f0e655f5ddec8b995fea8ec4c78ffd3",
                 "shasum": ""
             },
             "require": {
@@ -108,7 +108,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-command/issues",
                 "source": "https://github.com/MohamedKhedr700/core-command/tree/main"
             },
-            "time": "2023-09-28T22:59:26+00:00"
+            "time": "2023-10-05T19:54:54+00:00"
         },
         {
             "name": "raid/core-enum",
@@ -116,17 +116,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-enum.git",
-                "reference": "f566871b4891f24d135fde2c33e17097cc439cd7"
+                "reference": "0473ad048e5ffd3ad13a62bd8935d47d7c3db162"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-enum/zipball/f566871b4891f24d135fde2c33e17097cc439cd7",
-                "reference": "f566871b4891f24d135fde2c33e17097cc439cd7",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-enum/zipball/0473ad048e5ffd3ad13a62bd8935d47d7c3db162",
+                "reference": "0473ad048e5ffd3ad13a62bd8935d47d7c3db162",
                 "shasum": ""
             },
             "require": {
                 "archtechx/enums": "*",
-                "php": "^8.2"
+                "php": "^8.2",
+                "raid/core-command": "dev-main"
             },
             "default-branch": true,
             "type": "library",
@@ -163,7 +164,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-enum/issues",
                 "source": "https://github.com/MohamedKhedr700/core-enum/tree/main"
             },
-            "time": "2023-09-08T00:23:08+00:00"
+            "time": "2023-10-05T22:47:19+00:00"
         },
         {
             "name": "raid/core-gate",
@@ -171,16 +172,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-gate.git",
-                "reference": "94848af8bed3aa7a9575f74d1a0c08f3f62d6906"
+                "reference": "dbf8391f08837bfd383f057ece40a5b7714e3963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-gate/zipball/94848af8bed3aa7a9575f74d1a0c08f3f62d6906",
-                "reference": "94848af8bed3aa7a9575f74d1a0c08f3f62d6906",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-gate/zipball/dbf8391f08837bfd383f057ece40a5b7714e3963",
+                "reference": "dbf8391f08837bfd383f057ece40a5b7714e3963",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.2"
+                "php": "^8.2",
+                "raid/core-command": "*"
+            },
+            "require-dev": {
+                "laravel/pint": "*"
             },
             "default-branch": true,
             "type": "library",
@@ -217,22 +222,22 @@
                 "issues": "https://github.com/MohamedKhedr700/core-gate/issues",
                 "source": "https://github.com/MohamedKhedr700/core-gate/tree/main"
             },
-            "time": "2023-09-08T00:22:53+00:00"
+            "time": "2023-10-05T23:06:55+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "laravel/pint",
-            "version": "v1.13.2",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "bbb13460d7f8c5c0cd9a58109beedd79cd7331ff"
+                "reference": "08eb981f87286ee9f6038f66f6b8eec32bd87f2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/bbb13460d7f8c5c0cd9a58109beedd79cd7331ff",
-                "reference": "bbb13460d7f8c5c0cd9a58109beedd79cd7331ff",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/08eb981f87286ee9f6038f66f6b8eec32bd87f2c",
+                "reference": "08eb981f87286ee9f6038f66f6b8eec32bd87f2c",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +248,7 @@
                 "php": "^8.1.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.26.1",
+                "friendsofphp/php-cs-fixer": "^3.34.1",
                 "illuminate/view": "^10.23.1",
                 "laravel-zero/framework": "^10.1.2",
                 "mockery/mockery": "^1.6.6",
@@ -251,6 +256,7 @@
                 "nunomaduro/termwind": "^1.15.1",
                 "pestphp/pest": "^2.18.2"
             },
+            "default-branch": true,
             "bin": [
                 "builds/pint"
             ],
@@ -285,7 +291,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2023-09-19T15:55:02+00:00"
+            "time": "2023-10-05T12:56:07+00:00"
         }
     ],
     "aliases": [],
