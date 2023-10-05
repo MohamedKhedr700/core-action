@@ -18,7 +18,7 @@
         "raid/core-command": "*"
     },
     "require-dev": {
-        "laravel/pint": "^1.10"
+        "laravel/pint": "^1.0"
     },
     "autoload": {
         "psr-4": {
