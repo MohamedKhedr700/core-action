@@ -17,18 +17,10 @@
         "raid/core-gate": "*",
         "raid/core-command": "*"
     },
-    "require-dev": {
-        "laravel/pint": "^1.0"
-    },
     "autoload": {
         "psr-4": {
             "Raid\\Core\\Action\\": "src"
         }
-    },
-    "scripts": {
-        "pint": [
-            "./vendor/bin/pint --config pint.json "
-        ]
     },
     "extra": {
         "laravel": {
