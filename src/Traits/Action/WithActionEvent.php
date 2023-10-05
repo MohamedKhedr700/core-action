@@ -85,6 +85,6 @@ trait WithActionEvent
      */
     private function hasDefinedEvent(): bool
     {
-        return (bool) config('event.events_handler');
+        return (bool) config('event.events_manager');
     }
 }
