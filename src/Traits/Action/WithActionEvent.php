@@ -72,9 +72,7 @@ trait WithActionEvent
     public function event()
     {
         if (! isset($this->event) && $this->hasDefinedEvent()) {
-            $this->event = $this->actionableClass()::event($this->action())->setLazyLoad($this->lazyLoad());
-
-            //            $this->event = eventable($this->actionableClass(), $this->action())->setLazyLoad($this->lazyLoad());
+            $this->event = $this->actionableClass()::events($this->action())->setLazyLoad($this->lazyLoad());
         }
 
         return $this->event;
