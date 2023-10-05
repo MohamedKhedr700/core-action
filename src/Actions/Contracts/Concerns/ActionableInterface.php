@@ -20,6 +20,11 @@ interface ActionableInterface
     public static function actionableName(): string;
 
     /**
+     * {@inheritdoc}
+     */
+    public static function getActionableClass(): string;
+
+    /**
      * Get the action repository action name.
      */
     public static function getAction(): string;

@@ -156,7 +156,7 @@ This will allow us to execute the action from the model itself with other method
 
 ### Execute action from the model
 
-We can execute the action from the actionable calss or from `config/action.php` file.
+We can define the actions for the actionable class in two ways.
 
 - Define `getActions` method in the actionable class.
 

@@ -42,7 +42,17 @@ trait WithActionable
      */
     public static function actionableName(): string
     {
-        return static::actionableClass()::actionableName();
+        return method_exists(static::actionableClass(), 'actionableName')
+            ? static::actionableClass()::actionableName()
+            : static::getActionableClass();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getActionableClass(): string
+    {
+        return strtolower(class_basename(static::actionableClass()));
     }
 
     /**

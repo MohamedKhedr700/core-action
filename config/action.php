@@ -24,16 +24,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Eventable Handler
-    |--------------------------------------------------------------------------
-    | Here you can define the eventable handler that will be used in the application.
-    |
-    */
-
-    'eventable_handler' => null,
-
-    /*
-    |--------------------------------------------------------------------------
     | Actions
     |--------------------------------------------------------------------------
     | Here you can define the actions that will be used in the application.
