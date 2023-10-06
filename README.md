@@ -136,7 +136,12 @@ class UserController extends Controller
 
 The user is created, and everything is fine, but we can structure our pattern more.
 
-in the actionable class ex:`User` model, we can relate the actionable class with its actions.
+### Execute action from a model
+
+We need to use the `Actionable` trait in our actionable class.
+
+This will allow us to execute the action from the actionable class itself,
+and will relate the class with its actions.
 
 ``` php
 <?php
@@ -151,14 +156,9 @@ class User extends Account
 }
 ```
 
-This will allow us to execute the action from the model itself with other methods.
+We can define the actions in two ways.
 
-
-### Execute action from the model
-
-We can define the actions for the actionable class in two ways.
-
-- Define `getActions` method in the actionable class.
+- Define `getActions` method.
 
 ``` php
 <?php
