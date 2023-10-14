@@ -4,23 +4,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Actions Handler
+    | Actions Manager
     |--------------------------------------------------------------------------
-    | Here you can define the actions handler that will be used in the application.
+    | Here you can define the actions manager that will be used in the application.
     |
     */
 
-    'actions_handler' => '',
+    'actions_manager' => '',
 
     /*
     |--------------------------------------------------------------------------
-    | Actionable Handler
+    | Actionable Manager
     |--------------------------------------------------------------------------
-    | Here you can define the actionable handler that will be used in the application.
+    | Here you can define the actionable manager that will be used in the application.
     |
     */
 
-    'actionable_handler' => '',
+    'actionable_manager' => '',
 
     /*
     |--------------------------------------------------------------------------

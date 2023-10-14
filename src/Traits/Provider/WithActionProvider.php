@@ -46,40 +46,26 @@ trait WithActionProvider
      */
     private function registerAction(): void
     {
-        $this->registerActionsFacadeHandler();
-        $this->registerActionableHandler();
+        $this->registerActionsFacadeManager();
+        $this->registerActionableManager();
     }
 
     /**
-     * Register gates.
+     * Register actions facade manager.
      */
-    private function registerGates(): void
+    private function registerActionsFacadeManager(): void
     {
-        $gates = config('gate.gates', []);
-
-        foreach ($gates as $gateable => $gates) {
-            foreach ($gates as $gate) {
-                (new $gate($gateable))->register();
-            }
-        }
-    }
-
-    /**
-     * Register actions facade handler.
-     */
-    private function registerActionsFacadeHandler(): void
-    {
-        $actionManager = config('event.actions_handler');
+        $actionManager = config('event.actions_manager');
 
         //        $this->app->singleton(Actions::facade(), $actionManager);
         //        $this->app->singleton(ActionManagerInterface::class, $actionManager);
     }
 
     /**
-     * Register actionable handler.
+     * Register actionable manager
      */
-    private function registerActionableHandler(): void
+    private function registerActionableManager(): void
     {
-        //        $this->app->bind(ActionInterface::class, config('action.actionable_handler'));
+        //        $this->app->bind(ActionInterface::class, config('action.actionable_manager'));
     }
 }
