@@ -18,8 +18,8 @@ if (! function_exists('actionable')) {
     {
         $actionableActions = $actionable::getActions();
 
-        foreach ($actionableActions as $action) {
-            if ($action::action() !== $action) {
+        foreach ($actionableActions as $actionClass) {
+            if ($actionClass::action() !== $action) {
                 continue;
             }
 
