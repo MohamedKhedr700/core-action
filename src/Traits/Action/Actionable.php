@@ -25,7 +25,7 @@ trait Actionable
     /**
      * Invoke action.
      */
-    public static function action(string $action = '', ...$data): ActionInterface
+    public static function action(string $action = '', ...$data): ?ActionInterface
     {
         return actionable(static::actionable(), $action, $data);
     }
