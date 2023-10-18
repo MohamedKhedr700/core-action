@@ -7,7 +7,7 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\Crud\ListActionInterface;
-use Raid\Core\Enum\Models\Action\Action as ActionEnum;
+use Raid\Core\Enum\Enums\Action as ActionEnum;
 
 abstract class ListAction extends Action implements ListActionInterface
 {
