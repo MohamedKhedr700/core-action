@@ -23,7 +23,7 @@ if (! function_exists('actionable')) {
                 continue;
             }
 
-            return action($action, $data);
+            return action($actionClass, $data);
         }
 
         return null;
@@ -34,9 +34,9 @@ if (! function_exists('action')) {
     /**
      * Get action instance.
      */
-    function action(string $action, ...$data): mixed
+    function action(string $actionClass, ...$data): mixed
     {
-        $action = app($action);
+        $action = app($actionClass);
 
         if (! empty($data)) {
             $action = $action->execute(...$data);
