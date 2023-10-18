@@ -1,5 +1,7 @@
 <?php
 
+use Raid\Core\Action\Actions\Contracts\ActionInterface;
+
 if (! function_exists('concat_actions')) {
     /**
      * Concatenate actions.
@@ -34,7 +36,7 @@ if (! function_exists('actionable_action')) {
     /**
      * Get action instance.
      */
-    function actionable_action(string $actionClass, ...$data): mixed
+    function actionable_action(string $actionClass, ...$data): ActionInterface
     {
         $action = app($actionClass);
 
