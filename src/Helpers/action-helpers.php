@@ -23,18 +23,18 @@ if (! function_exists('actionable')) {
                 continue;
             }
 
-            return action($actionClass, $data);
+            return actionable_action($actionClass, $data);
         }
 
         return null;
     }
 }
 
-if (! function_exists('action')) {
+if (! function_exists('actionable_action')) {
     /**
      * Get action instance.
      */
-    function action(string $actionClass, ...$data): mixed
+    function actionable_action(string $actionClass, ...$data): mixed
     {
         $action = app($actionClass);
 
