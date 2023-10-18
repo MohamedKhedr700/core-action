@@ -16,6 +16,32 @@ if (! function_exists('actionable')) {
      */
     function actionable(string $actionable, string $action = '', ...$data): mixed
     {
-        return app($actionable)->action($action, ...$data);
+        $actionableActions = $actionable::getActions();
+
+        foreach ($actionableActions as $action) {
+            if ($action::action() !== $action) {
+                continue;
+            }
+
+            return action($action, $data);
+        }
+
+        return null;
+    }
+}
+
+if (! function_exists('action')) {
+    /**
+     * Get action instance.
+     */
+    function action(string $action, ...$data): mixed
+    {
+        $action = app($action);
+
+        if (! empty($data)) {
+            $action = $action->execute(...$data);
+        }
+
+        return $action;
     }
 }
