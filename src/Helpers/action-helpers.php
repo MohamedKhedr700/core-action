@@ -25,7 +25,7 @@ if (! function_exists('actionable')) {
                 continue;
             }
 
-            return actionable_action($actionClass, $data);
+            return actionable_action($actionClass, ...$data);
         }
 
         return null;

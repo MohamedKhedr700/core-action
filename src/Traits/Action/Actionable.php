@@ -27,7 +27,7 @@ trait Actionable
      */
     public static function action(string $action = '', ...$data): mixed
     {
-        return actionable(static::actionable(), $action, $data);
+        return actionable(static::actionable(), $action, ...$data);
     }
 
     /**
