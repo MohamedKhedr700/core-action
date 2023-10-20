@@ -3,6 +3,7 @@
 namespace Raid\Core\Action\Traits\Action;
 
 use Exception;
+use Raid\Core\Action\Exceptions\Actionable\InvalidActionableException;
 
 trait WithActionable
 {
@@ -94,6 +95,6 @@ trait WithActionable
 
         $classNamespace = static::class;
 
-        throw new Exception("Missing actionable class for action $classNamespace");
+        throw new InvalidActionableException("Missing actionable class for action $classNamespace");
     }
 }
