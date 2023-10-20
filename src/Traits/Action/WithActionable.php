@@ -2,7 +2,6 @@
 
 namespace Raid\Core\Action\Traits\Action;
 
-use Exception;
 use Raid\Core\Action\Exceptions\Actionable\InvalidActionableException;
 
 trait WithActionable
@@ -67,7 +66,7 @@ trait WithActionable
     /**
      * {@inheritdoc}
      *
-     * @throws Exception
+     * @throws InvalidActionableException
      */
     public function actionable(): object
     {
@@ -81,7 +80,7 @@ trait WithActionable
     /**
      * {@inheritdoc}
      *
-     * @throws Exception
+     * @throws InvalidActionableException
      */
     public function loadActionable(): void
     {
