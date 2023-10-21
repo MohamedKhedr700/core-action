@@ -14,7 +14,7 @@ trait WithActionable
     /**
      * The actionable class.
      */
-    public const ACTIONABLE = '';
+    public const ACTIONABLE = null;
 
     /**
      * The actionable instance.
@@ -32,7 +32,7 @@ trait WithActionable
     /**
      * {@inheritdoc}
      */
-    public static function actionableClass(): string
+    public static function actionableClass(): ?string
     {
         return static::ACTIONABLE;
     }
@@ -86,14 +86,12 @@ trait WithActionable
     {
         $actionableClass = static::actionableClass();
 
-        if (! empty($actionableClass)) {
-            $this->actionable = app($actionableClass);
+        if (! $actionableClass) {
+            $classNamespace = static::class;
 
-            return;
+            throw new InvalidActionableException("Missing actionable class for action $classNamespace");
         }
 
-        $classNamespace = static::class;
-
-        throw new InvalidActionableException("Missing actionable class for action $classNamespace");
+        $this->actionable = app($actionableClass);
     }
 }

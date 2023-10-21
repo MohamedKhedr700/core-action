@@ -12,7 +12,7 @@ interface ActionableInterface
     /**
      * Get the actionable class.
      */
-    public static function actionableClass(): string;
+    public static function actionableClass(): ?string;
 
     /**
      * Get the actionable name.
@@ -20,7 +20,7 @@ interface ActionableInterface
     public static function actionableName(): string;
 
     /**
-     * {@inheritdoc}
+     * Get the actionable class name.
      */
     public static function getActionableClass(): string;
 
