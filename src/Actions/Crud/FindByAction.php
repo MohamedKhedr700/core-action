@@ -16,7 +16,7 @@ abstract class FindByAction extends Action implements FindByActionInterface
     /**
      * {@inheritdoc}
      */
-    public function handle(array $conditions, array $columns = ['*'], bool $trashed = false): ?ModelInterface
+    public function handle(array $conditions, array $columns = ['*'], bool $trashed = false): ?object
     {
         return $this->actionable()->findBy($conditions, $columns, $trashed);
     }
