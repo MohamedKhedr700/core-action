@@ -11,15 +11,15 @@ interface ListActionInterface extends ActionInterface
     /**
      * Handle the action.
      */
-    public function handle(array $filters = [], array $columns = ['*'], bool $paginate = false): Collection|LengthAwarePaginator;
+    public function handle(array $filters = [], array $columns = ['*'], array $relations = [], bool $paginate = false): Collection|LengthAwarePaginator;
 
     /**
      * Retrieve all resources.
      */
-    public function all(array $filters = [], array $columns = ['*']): Collection;
+    public function all(array $filters = [], array $columns = ['*'], array $relations = []): Collection;
 
     /**
      * Retrieve paginated resources.
      */
-    public function paginate(array $filters = [], array $columns = ['*']): LengthAwarePaginator;
+    public function paginate(array $filters = [], array $columns = ['*'], array $relations = []): LengthAwarePaginator;
 }
