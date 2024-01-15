@@ -27,8 +27,6 @@ abstract class Action implements ActionAuthorizationInterface, ActionEventInterf
      */
     public function execute(...$arguments): mixed
     {
-        $this->authorized();
-
         $this->init($arguments);
 
         $result = $this->handle(...$arguments);
