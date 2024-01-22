@@ -19,7 +19,7 @@ abstract class UpdateAction extends Action implements UpdateActionInterface
      *
      * @throws Exception
      */
-    public function handle(string|object $id, array $data): object
+    public function handle(string|object $id, array $data): bool
     {
         return $this->actionable()->update($id, $data);
     }

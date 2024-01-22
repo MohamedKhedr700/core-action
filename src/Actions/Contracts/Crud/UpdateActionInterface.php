@@ -9,5 +9,5 @@ interface UpdateActionInterface extends ActionInterface
     /**
      * Handle the action.
      */
-    public function handle(string|object $id, array $data): object;
+    public function handle(string|object $id, array $data): bool;
 }
