@@ -23,7 +23,7 @@ abstract class ListAction extends Action implements ListActionInterface
      */
     public function handle(array $filters = [], array $columns = ['*'], array $relations = []): Collection|LengthAwarePaginator
     {
-        return array_key_exists('perPage', $filters) ?
+        return array_key_exists('page', $filters) ?
             $this->paginate($filters, $columns, $relations) :
             $this->all($filters, $columns, $relations);
     }
