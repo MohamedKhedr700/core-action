@@ -21,9 +21,11 @@ abstract class ListAction extends Action implements ListActionInterface
      *
      * @throws Exception
      */
-    public function handle(array $filters = [], array $columns = ['*'], array $relations = [], bool $paginate = false): Collection|LengthAwarePaginator
+    public function handle(array $filters = [], array $columns = ['*'], array $relations = []): Collection|LengthAwarePaginator
     {
-        return $paginate ? $this->paginate($filters, $columns, $relations) : $this->all($filters, $columns, $relations);
+        return array_key_exists('perPage', $filters) ?
+            $this->paginate($filters, $columns, $relations) :
+            $this->all($filters, $columns, $relations);
     }
 
     /**

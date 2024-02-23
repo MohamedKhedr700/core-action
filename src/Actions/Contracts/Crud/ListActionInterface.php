@@ -11,7 +11,7 @@ interface ListActionInterface extends ActionInterface
     /**
      * Handle the action.
      */
-    public function handle(array $filters = [], array $columns = ['*'], array $relations = [], bool $paginate = false): Collection|LengthAwarePaginator;
+    public function handle(array $filters = [], array $columns = ['*'], array $relations = []): Collection|LengthAwarePaginator;
 
     /**
      * Retrieve all resources.
